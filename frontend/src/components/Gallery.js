@@ -36,15 +36,6 @@ export const Gallery = ({ images, setImages }) => {
         {preview && (
           <div className='gallery-preview'>
             <Container className='d-flex justify-content-center'>
-              {/* without AWS UPLOAD
-                  <Image
-                className='modal-image'
-                src={`uploads/${preview.url
-                .toLowerCase()
-                .split(' ')
-                .join('-')
-                }`}
-              /> */}
               {/* with AWS UPLOAD*/}
                <Image
                 className='modal-image'
@@ -86,13 +77,6 @@ export const Gallery = ({ images, setImages }) => {
             <Col
               key={image._id}
               className='position-relative mb-3 img-thumb'
-              // without AWS UPLOAD
-              // style={{
-              //   backgroundImage: `url("uploads/${image.url
-              //     .toLowerCase()
-              //     .split(' ')
-              //     .join('-')} " )`,
-              // }}
               style={{
                 backgroundImage: `url("https://img-react-gallery.s3.eu-central-1.amazonaws.com/${image.url
                   .toLowerCase()
