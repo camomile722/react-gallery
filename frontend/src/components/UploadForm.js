@@ -35,11 +35,6 @@ export const UploadForm = ({ images, setImages }) => {
           console.log(response.data)
           setImages([response.data, ...images])
         })
-        //heroku production 
-        // axios.post('https://image-gallery-react-cam.herokuapp.com/images', formData).then((response) => {
-        //   console.log(response.data)
-        //   setImages([response.data, ...images])
-        // })
       } catch (e) {
         console.log(e)
       }
