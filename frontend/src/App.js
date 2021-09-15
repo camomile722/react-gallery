@@ -14,9 +14,6 @@ function App() {
     const getImages = async () => {
       setLoading(true)
       try {
-        // heroku
-        // await axios.get('https://image-gallery-react-cam.herokuapp.com/images').then((response) => {
-        //   setImages(response.data)
           await axios.get('http://localhost:5000/images').then((response) => {
             setImages(response.data)
           //console.log(response.data)
